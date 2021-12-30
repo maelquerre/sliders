@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cover bg-no-repeat;
+    background-image: url(https://tailwindcss.com/_next/static/media/docs-dark@tinypng.a8984b7fb44a4f8232d04de50220ab31.png);
+  }
+
+  .copy {
+    @apply text-slate-400;
+
+    a {
+      @apply font-semibold text-white border-b border-sky-400;
+
+      :hover {
+        @apply border-2;
+      }
+    }
+
+    code {
+      @apply font-mono font-medium text-slate-200;
+
+      &::before,
+      &::after {
+        content: "`"
+      }
+    }
+  }
+}
