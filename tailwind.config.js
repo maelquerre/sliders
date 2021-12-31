@@ -59,7 +59,6 @@ module.exports = {
             'thead th': {
               color: theme('colors.slate.200'),
               fontWeight: '600',
-              verticalAlign: 'bottom'
             },
             'tbody tr': {
               borderBottomWidth: '1px',
