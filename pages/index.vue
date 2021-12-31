@@ -39,24 +39,117 @@
         :items="appleItems"
         headline="Watch Entire Seasons"
       />
+
+      <div class="px-16 prose max-w-none columns-2">
+        <h3>Container</h3>
+        <p>
+
+        </p>
+
+        <h3>Children</h3>
+        <p>
+
+        </p>
+
+        <h3>Responsive</h3>
+        <p>
+
+        </p>
+
+        <h3>Naming</h3>
+        <table>
+          <tbody>
+            <tr>
+              <td>Container</td>
+              <td><code>.shelf-grid</code></td>
+            </tr>
+            <tr>
+              <td>List</td>
+              <td><code>.shelf-grid__list</code></td>
+            </tr>
+            <tr>
+              <td>Children</td>
+              <td><code>.shelf-grid__list-item</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <section class="mt-12">
-      <div class="mb-4 px-16 prose">
+      <div class="mb-4 px-16 prose max-w-none columns-2">
         <h2>Disney+</h2>
-        <p>
-          Disney+ uses the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">float</a> CSS property
-          to position the thumbnails.
-          The slide and the responsive columns behaviours are entirely controlled via JavaScript.
-          The gap is controlled with the thumbnails padding.
-          The headings and the thumbnails are separated.
-        </p>
       </div>
 
       <DisneySlickSlider
-        :columnsCount="4"
+        :columnsCount="5"
         :slides="disneySlides"
       />
+
+      <div class="px-16 prose max-w-none columns-2">
+        <h3>Sliding</h3>
+        <p>
+          The container takes the width of all the children combined. It is computed via JavaScript
+          and expands beyond the viewport. The sliding behavior is controlled with JavaScript and is
+          only triggerable with the arrow buttons.
+        </p>
+
+        <h3>Positioning</h3>
+        <p>
+          The children are positioned with the <code>float</code> CSS property.
+          The gap is controlled with the children padding. This padding also allows for the thumbnails
+          to scale when hovering them.
+        </p>
+
+        <h3>Responsive</h3>
+        <p>
+          There is only one type or row. The columns are computed via JavaScript.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Breakpoint</th>
+              <th>Columns count</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>DEFAULT</code></td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td><code>769px</code></td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td><code>1025px</code></td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td><code>1025px</code></td>
+              <td>5</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Naming</h3>
+        <table>
+          <tbody>
+            <tr>
+              <td>Container</td>
+              <td><code>.slick-slider</code></td>
+            </tr>
+            <tr>
+              <td>List</td>
+              <td><code>.slick-list</code></td>
+            </tr>
+            <tr>
+              <td>Children</td>
+              <td><code>.slick-slide</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <section class="mt-12">
@@ -95,11 +188,11 @@ export default {
       { image: 'https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/7C9BD4461D08B7F459636F6AB32E72CA594419D3C3127C3138C08C372A7D94CB/scale?width=800&aspectRatio=1.78&format=jpeg' }
     ],
     appleItems: [
-      { image: 'https://is2-ssl.mzstatic.com/image/thumb/vB48H4eBprLJ-WdCBTA6cw/666x375.jpg' },
+      { image: 'https://is2-ssl.mzstatic.com/image/thumb/qYEYYvFXN2O4zEuCcBSbjw/670x377.jpg' },
       { image: 'https://is5-ssl.mzstatic.com/image/thumb/X19Y90BV3y8hsFvF0l7Qmg/670x377.jpg' },
       { image: 'https://is4-ssl.mzstatic.com/image/thumb/L4WNJNV3nbmyAL6MQSeGuw/670x377.jpg' },
+      { image: 'https://is2-ssl.mzstatic.com/image/thumb/vB48H4eBprLJ-WdCBTA6cw/666x375.jpg' },
       { image: 'https://is3-ssl.mzstatic.com/image/thumb/_VWBeTzPLn6LeyUjlTaSiQ/670x377.jpg' },
-      { image: 'https://is2-ssl.mzstatic.com/image/thumb/qYEYYvFXN2O4zEuCcBSbjw/670x377.jpg' },
       { image: 'https://is4-ssl.mzstatic.com/image/thumb/Iz8wdsRXYRysnRRCY0yMrA/670x377.jpg' },
       { image: 'https://is4-ssl.mzstatic.com/image/thumb/AmQ1cNEzc1DMKH25B5J9aQ/670x377.jpg' },
       { image: 'https://is5-ssl.mzstatic.com/image/thumb/HSPjQEW5mDqwAbMbbhfNOQ/670x377.jpg' },

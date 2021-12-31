@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     fontFamily: {
       'sans': ['Inter', 'sans-serif'],
-      'mono': ['"JetBrains Mono"', 'monospace'],
+      'mono': ['"JetBrains Mono"', 'monospace']
     },
     extend: {
       typography: (theme) => ({
@@ -17,11 +17,17 @@ module.exports = {
           css: {
             color: theme('colors.slate.400'),
             h2: {
-              display: 'inline-block',
               marginBottom: '.5em',
-              fontSize: theme('fontSize.3xl')[0],
+              fontSize: '1.875rem',
               fontWeight: theme('fontWeight.extrabold'),
               color: theme('colors.gray.200'),
+              letterSpacing: theme('letterSpacing.tight')
+            },
+            h3: {
+              marginBottom: '.5em',
+              fontSize: '1.25em',
+              fontWeight: theme('fontWeight.semibold'),
+              color: theme('colors.slate.200'),
               letterSpacing: theme('letterSpacing.tight')
             },
             a: {
@@ -36,12 +42,29 @@ module.exports = {
             },
             code: {
               fontFamily: theme('fontFamily.mono'),
-              fontSize: theme('fontSize.sm'),
+              fontSize: '.875em',
               fontWeight: theme('fontWeight.medium'),
               color: theme('colors.slate.200'),
               '&::before, &::after': {
                 content: '`'
               }
+            },
+            table: {},
+            thead: {
+              borderBottomWidth: '1px',
+              borderBottomColor: theme('colors.gray.400') // /10
+            },
+            'thead th': {
+              color: theme('colors.gray.300'),
+              fontWeight: '600',
+              verticalAlign: 'bottom'
+            },
+            'tbody tr': {
+              borderBottomWidth: '1px',
+              borderBottomColor: theme('colors.slate.400')
+            },
+            'tbody tr:last-child': {
+              borderBottomColor: theme('colors.gray.400')
             }
           }
         }
