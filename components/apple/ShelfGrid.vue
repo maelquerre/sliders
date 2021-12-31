@@ -1,12 +1,12 @@
 <template>
   <div class="relative w-full md:px-16">
-    <div class="px-8 md:px-0">
-      <div class="text-2xl font-bold leading-tight text-white">
-        {{ heading }}
+    <div class="py-3 px-8 md:px-0">
+      <div class="text-lg font-bold leading-tight tracking-tight text-white">
+        {{ headline }}
       </div>
       <div
         v-if="subhead"
-        class="text-2xl font-normal leading-normal text-white/60"
+        class="text-base font-normal leading-normal text-white/60"
       >
         {{ subhead }}
       </div>
@@ -25,7 +25,7 @@
         >
           <div class="group relative">
             <a href="#">
-              <div class="relative mb-2 w-full h-full pt-[56.25%] rounded-xl shadow overflow-hidden box-border">
+              <div class="relative mb-2 w-full h-full pt-[56.25%] bg-gray-800 rounded-xl shadow-lg overflow-hidden box-border">
                 <picture>
                   <img
                     alt=""
@@ -64,3 +64,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+ul::-webkit-scrollbar {
+  display: none;
+}
+</style>

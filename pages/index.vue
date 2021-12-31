@@ -36,7 +36,8 @@
 
       <AppleShelfGrid
         :columnsCount="3"
-        :items="disneySlides"
+        :items="appleItems"
+        headline="Watch Entire Seasons"
       />
     </section>
 
@@ -92,6 +93,20 @@ export default {
       { image: 'https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/6E9A6E7F49813B804F205A3C907455C99F22395753008C51C6340BA1C4F93FC1/scale?width=800&aspectRatio=1.78&format=jpeg' },
       { image: 'https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/2F5CDF64A71387043B6CFF400CB0CE9BB312034E235CDC2A7A95BC59893E982B/badging?width=800&aspectRatio=1.78&format=jpeg' },
       { image: 'https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/7C9BD4461D08B7F459636F6AB32E72CA594419D3C3127C3138C08C372A7D94CB/scale?width=800&aspectRatio=1.78&format=jpeg' }
+    ],
+    appleItems: [
+      { image: 'https://is2-ssl.mzstatic.com/image/thumb/vB48H4eBprLJ-WdCBTA6cw/666x375.jpg' },
+      { image: 'https://is5-ssl.mzstatic.com/image/thumb/X19Y90BV3y8hsFvF0l7Qmg/670x377.jpg' },
+      { image: 'https://is4-ssl.mzstatic.com/image/thumb/L4WNJNV3nbmyAL6MQSeGuw/670x377.jpg' },
+      { image: 'https://is3-ssl.mzstatic.com/image/thumb/_VWBeTzPLn6LeyUjlTaSiQ/670x377.jpg' },
+      { image: 'https://is2-ssl.mzstatic.com/image/thumb/qYEYYvFXN2O4zEuCcBSbjw/670x377.jpg' },
+      { image: 'https://is4-ssl.mzstatic.com/image/thumb/Iz8wdsRXYRysnRRCY0yMrA/670x377.jpg' },
+      { image: 'https://is4-ssl.mzstatic.com/image/thumb/AmQ1cNEzc1DMKH25B5J9aQ/670x377.jpg' },
+      { image: 'https://is5-ssl.mzstatic.com/image/thumb/HSPjQEW5mDqwAbMbbhfNOQ/670x377.jpg' },
+      { image: 'https://is4-ssl.mzstatic.com/image/thumb/vWs6dt5xDhG_DjIoc-89tA/670x377.jpg' },
+      { image: 'https://is4-ssl.mzstatic.com/image/thumb/UPoQbHoPte_TFJXEvKIIsw/670x377.jpg' },
+      { image: 'https://is1-ssl.mzstatic.com/image/thumb/mqP1mK0HzuFhIBXsd_Q_SA/670x377.jpg' },
+      { image: 'https://is2-ssl.mzstatic.com/image/thumb/SEsiWD2cTDShiJqUtRPAxg/670x377.jpg' }
     ]
   })
 }
