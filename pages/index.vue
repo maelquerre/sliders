@@ -28,23 +28,15 @@
       <div class="mb-4 px-16 prose">
         <h2>Apple TV+</h2>
         <p>
-          Apple uses CSS
+          Apple TV+ uses CSS
           <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scroll_Snap/Basic_concepts">Scroll Snap</a> for
           the sliding part.
         </p>
       </div>
 
-      <ul>
-        <li>
-          <div>
-            <a href="">
-              <div>
-
-              </div>
-            </a>
-          </div>
-        </li>
-      </ul>
+      <AppleShelfGrid
+        :items="disneySlides"
+      />
     </section>
 
     <section class="mt-12">
@@ -53,7 +45,9 @@
         <p>
           Disney+ uses the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">float</a> CSS property
           to position the thumbnails.
-          The slide and the responsive columns behaviours are entirely controlled with JavaScript.
+          The slide and the responsive columns behaviours are entirely controlled via JavaScript.
+          The gap is controlled with the thumbnails padding.
+          The headings and the thumbnails are separated.
         </p>
       </div>
 
@@ -74,10 +68,12 @@
 </template>
 
 <script>
-import DisneySlickSlider from '../components/disney/components/SlickSlider'
+import AppleShelfGrid from '../components/apple/ShelfGrid'
+import DisneySlickSlider from '../components/disney/SlickSlider'
 
 export default {
   components: {
+    AppleShelfGrid,
     DisneySlickSlider
   },
 
