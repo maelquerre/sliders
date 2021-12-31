@@ -35,6 +35,7 @@
       </div>
 
       <AppleShelfGrid
+        :columnsCount="3"
         :items="disneySlides"
       />
     </section>
