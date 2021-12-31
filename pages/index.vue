@@ -103,30 +103,35 @@
 
         <h3>Responsive</h3>
         <p>
-          There is only one type or row. The columns are computed via JavaScript.
+          There is only one type of row. The columns are computed via JavaScript.
         </p>
         <table>
           <thead>
             <tr>
-              <th>Breakpoint</th>
+              <th>Breakpoint prefix</th>
+              <th>Minimum width</th>
               <th>Columns count</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><code>DEFAULT</code></td>
+              <td>None</td>
+              <td>0</td>
               <td>2</td>
             </tr>
             <tr>
-              <td><code>769px</code></td>
+              <td><code>lg</code></td>
+              <td>1024px</td>
               <td>3</td>
             </tr>
             <tr>
-              <td><code>1025px</code></td>
+              <td><code>xl</code></td>
+              <td>1280px</td>
               <td>4</td>
             </tr>
             <tr>
-              <td><code>1025px</code></td>
+              <td><code>2xl</code></td>
+              <td>1536px</td>
               <td>5</td>
             </tr>
           </tbody>
