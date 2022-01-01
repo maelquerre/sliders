@@ -49,14 +49,14 @@
       </div>
 
       <AppleShelfGrid
-        headline="Watch Entire Seasons"
-        :movies="movies"
+        headline="Popular"
+        :movies="popularMovies"
         grid="C"
       />
 
       <AppleShelfGrid
         headline="Coming Soon"
-        :movies="movies"
+        :movies="upcomingMovies"
         grid="B"
       />
 
@@ -101,8 +101,12 @@
         <h2>Disney+</h2>
       </div>
 
+      <div class="px-4 md:px-16">
+        <h3 class="text-xl font-bold">Trending</h3>
+      </div>
+
       <DisneySlickSlider
-        :movies="movies"
+        :movies="popularMovies"
       />
 
       <div class="px-4 prose max-w-none md:px-16 md:columns-2 md:gap-x-12">
@@ -247,11 +251,15 @@ export default {
     const configurationResponse = await $api.$get('configuration')
     store.commit('tmdb/setConfiguration', configurationResponse)
 
-    const moviesResponse = await $api.$get('movie/popular')
-    const movies = moviesResponse.results
+    const popularMoviesResponse = await $api.$get('movie/popular')
+    const popularMovies = popularMoviesResponse.results
+
+    const upcomingMoviesResponse = await $api.$get('movie/upcoming')
+    const upcomingMovies = upcomingMoviesResponse.results
 
     return {
-      movies
+      popularMovies,
+      upcomingMovies
     }
   }
 }
