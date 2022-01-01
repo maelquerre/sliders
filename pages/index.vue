@@ -181,7 +181,48 @@
         <h2>Netflix</h2>
       </div>
 
-
+      <div class="px-4 prose max-w-none md:px-16 md:columns-2 md:gap-x-12">
+        <h3>Responsive</h3>
+        <p>
+          There is only one type of row throughout the whole application. The columns are computed via JavaScript.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Breakpoint prefix</th>
+              <th>Minimum width</th>
+              <th>Columns count</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>None</td>
+              <td>—</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td><code>sm</code></td>
+              <td>500px</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td><code>lg</code></td>
+              <td>800px</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td><code>xl</code></td>
+              <td>1100px</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td><code>xl-2xl</code></td>
+              <td>1400px</td>
+              <td>6</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
   </div>
 </template>
