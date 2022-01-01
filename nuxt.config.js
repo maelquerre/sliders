@@ -29,15 +29,14 @@ export default {
     ]
   },
   modules: [
-    '@nuxtjs/axios',
+    '@nuxtjs/axios'
+  ],
+  plugins: [
+    '~/plugins/api'
   ],
   privateRuntimeConfig: {
-    axios: {
-      baseUrl: process.env.TMDB_BASE_URL,
-      params: {
-        'api_key': process.env.TMDB_API_KEY
-      }
-    }
+    tmdbBaseUrl: process.env.TMDB_BASE_URL,
+    tmdbApiKey: process.env.TMDB_API_KEY,
   },
   target: 'static'
 }

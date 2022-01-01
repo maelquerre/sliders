@@ -34,10 +34,10 @@
           }"
         >
           <SlickSlide
-            v-for="(slide, index) in slides"
+            v-for="(movie, index) in movies"
             :key="index"
             :class="{ 'opacity-50': index < currentSlide * columnsCount - columnsCount || index >= currentSlide * columnsCount }"
-            :imageSrc="slide.image"
+            :imageSrc="image(movie.backdrop_path)"
             :width="slickSlideWidth"
           />
         </div>
@@ -45,7 +45,7 @@
 
       <button
         class="absolute top-0 right-0 block cursor-pointer w-16 h-full opacity-0 z-10 translate-x-full transition-opacity duration-200 hover:opacity-100"
-        :class="{ 'pointer-events-none': currentSlide === Math.ceil(slides.length / columnsCount) }"
+        :class="{ 'pointer-events-none': currentSlide === Math.ceil(movies.length / columnsCount) }"
         @click="currentSlide++"
       >
         <svg
@@ -71,6 +71,8 @@
 import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '../../tailwind.config.js'
 
+import { mapGetters } from 'vuex'
+
 import SlickSlide from './SlickSlide'
 
 export default {
@@ -81,7 +83,7 @@ export default {
   },
 
   props: {
-    slides: Array
+    movies: Array
   },
 
   data: () => ({
@@ -93,6 +95,10 @@ export default {
   }),
 
   computed: {
+    ...mapGetters({
+      image: 'tmdb/image'
+    }),
+
     tailwindTheme() {
       return resolveConfig(tailwindConfig)['theme']
     }
@@ -123,7 +129,7 @@ export default {
 
     computeSlickWidths() {
       this.slickListWidth = this.$refs.slickList.offsetWidth
-      this.slickTrackWidth = this.slides.length * (this.slickListWidth / this.columnsCount)
+      this.slickTrackWidth = this.movies.length * (this.slickListWidth / this.columnsCount)
       this.slickSlideWidth = this.slickListWidth / this.columnsCount
     }
   }

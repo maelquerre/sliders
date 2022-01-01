@@ -50,7 +50,7 @@
 
       <AppleShelfGrid
         :columnsCount="3"
-        :items="appleItems"
+        :movies="movies"
         headline="Watch Entire Seasons"
       />
 
@@ -96,7 +96,7 @@
       </div>
 
       <DisneySlickSlider
-        :slides="disneySlides"
+        :movies="movies"
       />
 
       <div class="px-4 prose max-w-none md:px-16 md:columns-2 md:gap-x-12">
@@ -268,10 +268,16 @@ export default {
     ]
   }),
 
-  async asyncData({ $axios }) {
-    console.log({ $axios })
-    const ip = await $axios.$get('movie/popular')
-    return { ip }
+  async asyncData({ $api, store }) {
+    const configurationResponse = await $api.$get('configuration')
+    store.commit('tmdb/setConfiguration', configurationResponse)
+
+    const moviesResponse = await $api.$get('movie/popular')
+    const movies = moviesResponse.results
+
+    return {
+      movies
+    }
   }
 }
 </script>

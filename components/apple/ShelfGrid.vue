@@ -20,7 +20,7 @@
         }"
       >
         <li
-          v-for="(item, index) in items"
+          v-for="(movie, index) in movies"
           class="md:snap-start"
         >
           <div class="group relative">
@@ -30,7 +30,7 @@
                   <img
                     alt=""
                     class="absolute inset-0 m-auto h-full transition-opacity duration-150"
-                    :src="item.image"
+                    :src="image(movie.backdrop_path)"
                   >
                 </picture>
               </div>
@@ -53,6 +53,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'ShelfGrid',
 
@@ -60,7 +62,13 @@ export default {
     columnsCount: Number,
     headline: String,
     subhead: String,
-    items: Array
+    movies: Array
+  },
+
+  computed: {
+    ...mapGetters({
+      image: 'tmdb/image'
+    })
   }
 }
 </script>
