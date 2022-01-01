@@ -1,5 +1,12 @@
 <template>
   <div class="px-4 overflow-x-hidden md:px-16">
+    <div
+      v-if="name"
+      class="text-xl font-bold"
+    >
+      {{ name }}
+    </div>
+
     <div class="relative block mb-4">
       <button
         class="absolute top-0 left-0 block cursor-pointer w-4 h-full z-10 -translate-x-full transition-opacity duration-200 hover:opacity-100 md:w-16 md:opacity-0"
@@ -83,7 +90,8 @@ export default {
   },
 
   props: {
-    movies: Array
+    movies: Array,
+    name: String
   },
 
   data: () => ({

@@ -39,14 +39,14 @@
     </header>
 
     <section class="mt-12">
-      <div class="mb-4 px-4 prose md:px-16">
+      <Prose class="mb-4">
         <h2>Apple TV+</h2>
         <p>
           Apple TV+ uses CSS
           <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scroll_Snap/Basic_concepts">Scroll Snap</a> for
           the sliding part.
         </p>
-      </div>
+      </Prose>
 
       <AppleShelfGrid
         headline="Popular"
@@ -60,15 +60,16 @@
         grid="B"
       />
 
-      <div class="px-4 prose max-w-none md:px-16 md:columns-2">
-        <h3>Container</h3>
+      <Prose split>
+        <h3>Sliding</h3>
         <p>
 
         </p>
 
-        <h3>Children</h3>
+        <h3>Positioning</h3>
         <p>
-
+          The container uses the <code>grid-auto-columns</code> CSS property to determine the number of columns
+          to display in a row.
         </p>
 
         <h3>Columns</h3>
@@ -93,23 +94,20 @@
             </tr>
           </tbody>
         </table>
-      </div>
+      </Prose>
     </section>
 
     <section class="mt-12">
-      <div class="mb-4 px-4 prose md:px-16">
+      <Prose class="mb-4">
         <h2>Disney+</h2>
-      </div>
-
-      <div class="px-4 md:px-16">
-        <h3 class="text-xl font-bold">Trending</h3>
-      </div>
+      </Prose>
 
       <DisneySlickSlider
+        name="Trending"
         :movies="popularMovies"
       />
 
-      <div class="px-4 prose max-w-none md:px-16 md:columns-2 md:gap-x-12">
+      <Prose split>
         <h3>Sliding</h3>
         <p>
           The container takes the width of all the children combined. It is computed via JavaScript
@@ -126,7 +124,8 @@
 
         <h3>Columns</h3>
         <p>
-          There is only one type of row. The columns are computed via JavaScript.
+          There is only one type of row throughout the whole application.
+          The number of columns is computed via JavaScript.
         </p>
         <table>
           <thead>
@@ -183,18 +182,19 @@
             </tr>
           </tbody>
         </table>
-      </div>
+      </Prose>
     </section>
 
     <section class="mt-12">
-      <div class="mt-4 px-16 prose">
+      <Prose class="mt-4">
         <h2>Netflix</h2>
-      </div>
+      </Prose>
 
-      <div class="px-4 prose max-w-none md:px-16 md:columns-2 md:gap-x-12">
+      <Prose split>
         <h3>Columns</h3>
         <p>
-          There is only one type of row throughout the whole application. The columns are computed via JavaScript.
+          There is only one type of row throughout the whole application.
+          The number of columns is computed via JavaScript.
         </p>
         <table>
           <thead>
@@ -232,7 +232,7 @@
             </tr>
           </tbody>
         </table>
-      </div>
+      </Prose>
     </section>
   </div>
 </template>
@@ -240,11 +240,13 @@
 <script>
 import AppleShelfGrid from '../components/apple/ShelfGrid'
 import DisneySlickSlider from '../components/disney/SlickSlider'
+import Prose from '../components/core/Prose'
 
 export default {
   components: {
     AppleShelfGrid,
-    DisneySlickSlider
+    DisneySlickSlider,
+    Prose
   },
 
   async asyncData({ $api, store }) {
