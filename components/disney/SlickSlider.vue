@@ -68,31 +68,64 @@
 </template>
 
 <script>
+import resolveConfig from 'tailwindcss/resolveConfig'
+import tailwindConfig from '../../tailwind.config.js'
+
 import SlickSlide from './SlickSlide'
 
 export default {
   name: 'SlickSlider',
 
+  components: {
+    SlickSlide
+  },
+
   props: {
-    slides: Array,
-    columnsCount: Number,
+    slides: Array
   },
 
   data: () => ({
+    columnsCount: 2,
     currentSlide: 1,
     slickListWidth: 'auto',
     slickTrackWidth: 0,
     slickSlideWidth: 0
   }),
 
-  components: {
-    SlickSlide
+  computed: {
+    tailwindTheme() {
+      return resolveConfig(tailwindConfig)['theme']
+    }
   },
 
   mounted() {
-    this.slickListWidth = this.$refs.slickList.offsetWidth
-    this.slickTrackWidth = this.slides.length * (this.slickListWidth / this.columnsCount)
-    this.slickSlideWidth = this.slickListWidth / this.columnsCount
+    this.computeColumnsCount()
+    this.computeSlickWidths()
+
+    window.addEventListener('resize', () => {
+      this.computeColumnsCount()
+      this.computeSlickWidths()
+    })
+  },
+
+  methods: {
+    computeColumnsCount() {
+      if (window.innerWidth < parseInt(this.tailwindTheme.screens['lg'], 10)) {
+        this.columnsCount = 2
+      } else if (window.innerWidth < parseInt(this.tailwindTheme.screens['xl'], 10)) {
+        this.columnsCount = 3
+      } else if (window.innerWidth < parseInt(this.tailwindTheme.screens['2xl'], 10)) {
+        this.columnsCount = 4
+      } else {
+        this.columnsCount = 5
+      }
+    },
+
+    computeSlickWidths() {
+      this.slickListWidth = this.$refs.slickList.offsetWidth
+      this.slickTrackWidth = this.slides.length * (this.slickListWidth / this.columnsCount)
+      this.slickSlideWidth = this.slickListWidth / this.columnsCount
+    }
   }
 }
 </script>

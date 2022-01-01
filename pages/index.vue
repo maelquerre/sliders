@@ -96,7 +96,6 @@
       </div>
 
       <DisneySlickSlider
-        :columnsCount="5"
         :slides="disneySlides"
       />
 
