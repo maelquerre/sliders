@@ -65,7 +65,7 @@
 
         </p>
 
-        <h3>Responsive</h3>
+        <h3>Columns</h3>
         <p>
 
         </p>
@@ -114,7 +114,7 @@
           to scale when hovering them.
         </p>
 
-        <h3>Responsive</h3>
+        <h3>Columns</h3>
         <p>
           There is only one type of row. The columns are computed via JavaScript.
         </p>
@@ -182,7 +182,7 @@
       </div>
 
       <div class="px-4 prose max-w-none md:px-16 md:columns-2 md:gap-x-12">
-        <h3>Responsive</h3>
+        <h3>Columns</h3>
         <p>
           There is only one type of row throughout the whole application. The columns are computed via JavaScript.
         </p>
@@ -266,6 +266,12 @@ export default {
       { image: 'https://is1-ssl.mzstatic.com/image/thumb/mqP1mK0HzuFhIBXsd_Q_SA/670x377.jpg' },
       { image: 'https://is2-ssl.mzstatic.com/image/thumb/SEsiWD2cTDShiJqUtRPAxg/670x377.jpg' }
     ]
-  })
+  }),
+
+  async asyncData({ $axios }) {
+    console.log({ $axios })
+    const ip = await $axios.$get('movie/popular')
+    return { ip }
+  }
 }
 </script>
