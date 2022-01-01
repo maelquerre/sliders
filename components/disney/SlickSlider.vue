@@ -1,14 +1,14 @@
 <template>
-  <div class="overflow-x-hidden px-16">
+  <div class="px-4 overflow-x-hidden md:px-16">
     <div class="relative block mb-4">
       <button
-        class="absolute top-0 left-0 block cursor-pointer w-16 h-full opacity-0 z-10 -translate-x-full transition-opacity duration-200 hover:opacity-100"
-        :class="{ 'pointer-events-none': currentSlide === 1 }"
+        class="absolute top-0 left-0 block cursor-pointer w-4 h-full z-10 -translate-x-full transition-opacity duration-200 hover:opacity-100 md:w-16 md:opacity-0"
+        :class="{ 'opacity-0 pointer-events-none': currentSlide === 1 }"
         @click="currentSlide = currentSlide === 0 ? 0 : currentSlide - 1"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="inline h-10 w-10 text-gray-50"
+          class="inline h-4 w-4 text-gray-50 md:h-10 md:w-10"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -44,13 +44,13 @@
       </div>
 
       <button
-        class="absolute top-0 right-0 block cursor-pointer w-16 h-full opacity-0 z-10 translate-x-full transition-opacity duration-200 hover:opacity-100"
-        :class="{ 'pointer-events-none': currentSlide === Math.ceil(movies.length / columnsCount) }"
+        class="absolute top-0 right-0 block cursor-pointer w-4 h-full z-10 translate-x-full transition-opacity duration-200 hover:opacity-100 md:w-16 md:opacity-0"
+        :class="{ 'opacity-0 pointer-events-none': currentSlide === Math.ceil(movies.length / columnsCount) }"
         @click="currentSlide++"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="inline h-10 w-10 text-gray-50"
+          class="inline h-4 w-4 text-gray-50 md:h-10 md:w-10"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"

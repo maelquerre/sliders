@@ -14,13 +14,18 @@
 
     <div class="-mx-4 px-4 w-full box-content">
       <ul
-        class="grid grid-flow-col gap-4 snap-x snap-mandatory pl-4 overflow-x-auto overflow-y-hidden scroll-smooth md:-my-6 md:py-6 md:pl-0"
-        :style="{
-          gridAutoColumns: `calc((100% - ${columnsCount - 1} * 1rem) / ${columnsCount});`
+        class="grid grid-flow-col gap-3 snap-x snap-mandatory pl-4 overflow-x-auto overflow-y-hidden scroll-smooth scrollbar:hidden md:-my-5 md:py-5 md:pl-0 md:gap-5"
+        :class="{
+          'auto-cols-a': grid === 'A',
+          'auto-cols-b': grid === 'B',
+          'auto-cols-c': grid === 'C',
+          'auto-cols-epic-inline': grid === 'EpicInline',
+          'auto-cols-full-width': grid === 'FullWidth'
         }"
       >
         <li
           v-for="(movie, index) in movies"
+          :key="index"
           class="md:snap-start"
         >
           <div class="group relative">
@@ -59,10 +64,10 @@ export default {
   name: 'ShelfGrid',
 
   props: {
-    columnsCount: Number,
     headline: String,
     subhead: String,
-    movies: Array
+    movies: Array,
+    grid: String
   },
 
   computed: {
@@ -74,7 +79,67 @@ export default {
 </script>
 
 <style scoped>
-ul::-webkit-scrollbar {
+.auto-cols-a {
+  grid-auto-columns: theme('width.72');
+
+  @screen md {
+    grid-auto-columns: calc((100% - 1 * theme('gap.5')) / 2);
+  }
+
+  @screen 2xl {
+    grid-auto-columns: calc((100% - 2 * theme('gap.5')) / 3);
+  }
+}
+
+.auto-cols-b {
+  grid-auto-columns: theme('width.64');
+
+  @screen md {
+    grid-auto-columns: calc((100% - 1 * theme('gap.5')) / 2);
+  }
+
+  @screen lg {
+    grid-auto-columns: calc((100% - 2 * theme('gap.5')) / 3);
+  }
+
+  @screen 2xl {
+    grid-auto-columns: calc((100% - 3 * theme('gap.5')) / 4);
+  }
+}
+
+.auto-cols-c {
+  grid-auto-columns: theme('width.48');
+
+  @screen md {
+    grid-auto-columns: calc((100% - 2 * theme('gap.5')) / 3);
+  }
+
+  @screen lg {
+    grid-auto-columns: calc((100% - 3 * theme('gap.5')) / 4);
+  }
+
+  @screen 2xl {
+    grid-auto-columns: calc((100% - 4 * theme('gap.5')) / 5);
+  }
+}
+
+.auto-cols-epic-inline {
+  grid-auto-columns: theme('width.32');
+
+  @screen md {
+    grid-auto-columns: calc((100% - 4 * theme('gap.5')) / 5);
+  }
+
+  @screen 2xl {
+    grid-auto-columns: calc((100% - 5 * theme('gap.5')) / 6);
+  }
+}
+
+.auto-cols-full-width {
+  grid-auto-columns: calc((100% - 0 * theme('gap.5')) / 1);
+}
+
+.scrollbar\:hidden::-webkit-scrollbar {
   display: none;
 }
 </style>
