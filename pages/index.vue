@@ -41,41 +41,121 @@
     <section class="mt-12">
       <Prose class="mb-4">
         <h2>Apple TV+</h2>
-        <p>
-          Apple TV+ uses CSS
-          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scroll_Snap/Basic_concepts">Scroll Snap</a> for
-          the sliding part.
-        </p>
+        <h3><code>data-grid="A"</code></h3>
       </Prose>
-
       <AppleShelfGrid
-        headline="Popular"
+        :movies="popularMovies"
+        grid="A"
+      />
+
+      <Prose class="mt-6 mb-4">
+        <h3><code>data-grid="B"</code></h3>
+      </Prose>
+      <AppleShelfGrid
+        :movies="popularMovies"
+        grid="B"
+      />
+
+      <Prose class="mt-6 mb-4">
+        <h3><code>data-grid="C"</code></h3>
+      </Prose>
+      <AppleShelfGrid
         :movies="popularMovies"
         grid="C"
       />
 
+      <Prose class="mt-6 mb-4">
+        <h3><code>data-grid="EpicInline"</code></h3>
+      </Prose>
       <AppleShelfGrid
-        headline="Coming Soon"
-        :movies="upcomingMovies"
-        grid="B"
+        :movies="popularMovies"
+        grid="EpicInline"
       />
 
-      <Prose split>
+      <Prose class="mt-6 mb-4">
+        <h3><code>data-grid="FullWidth"</code></h3>
+      </Prose>
+      <AppleShelfGrid
+        :movies="popularMovies"
+        grid="FullWidth"
+      />
+
+      <Prose
+        class="mt-6"
+        split
+      >
         <h3>Sliding</h3>
         <p>
-
+          Apple TV+ uses CSS
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scroll_Snap/Basic_concepts">Scroll Snap</a>
+          to control how the children should stick while scrolling.
         </p>
 
         <h3>Positioning</h3>
         <p>
           The container uses the <code>grid-auto-columns</code> CSS property to determine the number of columns
-          to display in a row.
+          to display in a row according to the breakpoints.
         </p>
 
         <h3>Columns</h3>
         <p>
-
+          There are multiple types of rows, with multiple columns layouts for each breakpoint.
         </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th><code>data-grid</code></th>
+              <th>Default</th>
+              <th>740px</th>
+              <th>1000px</th>
+              <th>1320px</th>
+              <th>1680px</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A</td>
+              <td>298px</td>
+              <td>2 columns</td>
+              <td>2 columns</td>
+              <td>3 columns</td>
+              <td>3 columns</td>
+            </tr>
+            <tr>
+              <td>B</td>
+              <td>270px</td>
+              <td>2 columns</td>
+              <td>3 columns</td>
+              <td>4 columns</td>
+              <td>4 columns</td>
+            </tr>
+            <tr>
+              <td>C</td>
+              <td>200px</td>
+              <td>3 columns</td>
+              <td>4 columns</td>
+              <td>5 columns</td>
+              <td>5 columns</td>
+            </tr>
+            <tr>
+              <td>EpicInline</td>
+              <td>126px</td>
+              <td>5 columns</td>
+              <td>5 columns</td>
+              <td>6 columns</td>
+              <td>6 columns</td>
+            </tr>
+            <tr>
+              <td>FullWidth</td>
+              <td>1 column</td>
+              <td>1 column</td>
+              <td>1 column</td>
+              <td>1 column</td>
+              <td>1 column</td>
+            </tr>
+          </tbody>
+        </table>
 
         <h3>Naming</h3>
         <table>

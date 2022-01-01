@@ -6,7 +6,7 @@ export const getters = {
   image: ({ configuration }) => (path) => {
     const { secure_base_url, backdrop_sizes } = configuration.images
 
-    return `${secure_base_url}${backdrop_sizes[1]}${path}`
+    return `${secure_base_url}${backdrop_sizes[2]}${path}`
   }
 }
 

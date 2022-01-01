@@ -2,11 +2,18 @@
   <li class="md:snap-start">
     <div class="group relative">
       <a href="#">
-        <div class="relative mb-2 w-full h-full pt-[56.25%] bg-gray-800 rounded-xl shadow-lg overflow-hidden box-border">
+        <div
+          class="relative mb-2 w-full h-full bg-gray-800 rounded-xl shadow-lg overflow-hidden box-border"
+          :class="fullWidth ? 'pt-[27.5%]' : 'pt-[56.25%]'"
+        >
           <picture>
+            <source
+              :srcset="`${imageSrc}`"
+              type="image/jpeg"
+            >
             <img
               alt=""
-              class="absolute inset-0 m-auto h-full transition-opacity duration-150"
+              class="absolute inset-0 m-auto h-full rounded-xl transition-opacity duration-150 w-full object-cover"
               :src="imageSrc"
             >
           </picture>
@@ -31,6 +38,7 @@ export default {
   name: 'ShelfGridListItem',
 
   props: {
+    fullWidth: Boolean,
     imageSrc: String
   }
 }

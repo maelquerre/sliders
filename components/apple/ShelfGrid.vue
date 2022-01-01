@@ -1,17 +1,5 @@
 <template>
   <div class="relative w-full md:px-16">
-    <div class="py-3 px-4 md:px-0">
-      <div class="text-lg font-bold leading-tight tracking-tight text-white">
-        {{ headline }}
-      </div>
-      <div
-        v-if="subhead"
-        class="text-base font-normal leading-normal text-white/60"
-      >
-        {{ subhead }}
-      </div>
-    </div>
-
     <div class="-mx-4 px-4 w-full box-content">
       <ul
         class="grid grid-flow-col gap-3 snap-x snap-mandatory pl-4 overflow-x-auto overflow-y-hidden scroll-smooth scrollbar:hidden md:-my-5 md:py-5 md:pl-0 md:gap-5"
@@ -27,6 +15,7 @@
           v-for="(movie, index) in movies"
           :key="index"
           class="md:snap-start"
+          :fullWidth="grid === 'FullWidth'"
           :imageSrc="image(movie.backdrop_path)"
         />
       </ul>
@@ -47,8 +36,6 @@ export default {
   },
 
   props: {
-    headline: String,
-    subhead: String,
     movies: Array,
     grid: String
   },

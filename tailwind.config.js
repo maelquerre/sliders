@@ -32,6 +32,9 @@ module.exports = {
               color: theme('colors.slate[200]'),
               letterSpacing: theme('letterSpacing.tight')
             },
+            h4: {
+              color: theme('colors.slate[200]'),
+            },
             a: {
               textDecoration: 'none',
               fontWeight: theme('fontWeight.semibold'),

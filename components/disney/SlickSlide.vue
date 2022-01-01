@@ -15,7 +15,7 @@
           <div class="relative pt-[56.25%] w-full h-0 rounded overflow-hidden">
             <div>
               <img
-                class="absolute block inset-0 w-full h-full object-cover "
+                class="absolute block inset-0 w-full h-full object-cover"
                 :src="imageSrc"
               >
             </div>
