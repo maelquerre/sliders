@@ -129,7 +129,7 @@
           <tbody>
             <tr>
               <td>None</td>
-              <td>0</td>
+              <td>—</td>
               <td>2</td>
             </tr>
             <tr>
@@ -152,18 +152,24 @@
 
         <h3>Naming</h3>
         <table>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Name</th>
+            </tr>
+          </thead>
           <tbody>
             <tr>
               <td>Container</td>
-              <td><code>.slick-slider</code></td>
+              <td><code>slick-slider</code></td>
             </tr>
             <tr>
               <td>List</td>
-              <td><code>.slick-list</code></td>
+              <td><code>slick-list</code></td>
             </tr>
             <tr>
               <td>Children</td>
-              <td><code>.slick-slide</code></td>
+              <td><code>slick-slide</code></td>
             </tr>
           </tbody>
         </table>
