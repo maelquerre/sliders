@@ -17,19 +17,19 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.slate.400'),
+            color: theme('colors.slate[400]'),
             h2: {
               marginBottom: '.5em',
               fontSize: '1.875rem',
               fontWeight: theme('fontWeight.extrabold'),
-              color: theme('colors.gray.200'),
+              color: theme('colors.gray[200]'),
               letterSpacing: theme('letterSpacing.tight')
             },
             h3: {
               marginBottom: '.5em',
               fontSize: '1.25em',
               fontWeight: theme('fontWeight.semibold'),
-              color: theme('colors.slate.200'),
+              color: theme('colors.slate[200]'),
               letterSpacing: theme('letterSpacing.tight')
             },
             a: {
@@ -37,7 +37,7 @@ module.exports = {
               fontWeight: theme('fontWeight.semibold'),
               color: theme('colors.white'),
               borderBottomWidth: '1px',
-              borderColor: theme('colors.sky.400'),
+              borderColor: theme('colors.sky[400]'),
               '&:hover': {
                 borderBottomWidth: '2px'
               }
@@ -46,27 +46,26 @@ module.exports = {
               fontFamily: theme('fontFamily.mono'),
               fontSize: '.875em',
               fontWeight: theme('fontWeight.medium'),
-              color: theme('colors.slate.200'),
+              color: theme('colors.slate[200]'),
               '&::before, &::after': {
                 content: '`'
               }
             },
-            table: {},
             thead: {
               borderBottomWidth: '1px',
-              borderBottomColor: withAlphaValue(theme('colors.gray.400'), .2)
+              borderBottomColor: withAlphaValue(theme('colors.gray[400]'), .2)
             },
             'thead th': {
-              color: theme('colors.slate.200'),
+              color: theme('colors.slate[200]'),
               fontWeight: '600',
             },
             'tbody tr': {
               borderBottomWidth: '1px',
-              borderBottomColor: withAlphaValue(theme('colors.gray.400'), .1)
+              borderBottomColor: withAlphaValue(theme('colors.gray[400]'), .1)
             },
             'tbody tr:last-child': {
               borderBottomWidth: '1px',
-              borderBottomColor: withAlphaValue(theme('colors.gray.400'), .2)
+              borderBottomColor: withAlphaValue(theme('colors.gray[400]'), .2)
             }
           }
         }

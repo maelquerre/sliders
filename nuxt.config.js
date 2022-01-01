@@ -17,7 +17,7 @@ export default {
   ],
   head: {
     bodyAttrs: {
-      class: 'py-12 text-white bg-gray-900 antialiased'
+      class: 'text-white bg-gray-900 antialiased'
     },
     link: [
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },

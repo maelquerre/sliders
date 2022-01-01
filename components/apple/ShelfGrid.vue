@@ -1,6 +1,6 @@
 <template>
   <div class="relative w-full md:px-16">
-    <div class="py-3 px-8 md:px-0">
+    <div class="py-3 px-4 md:px-0">
       <div class="text-lg font-bold leading-tight tracking-tight text-white">
         {{ headline }}
       </div>
@@ -14,14 +14,14 @@
 
     <div class="-mx-4 px-4 w-full box-content">
       <ul
-        class="grid grid-flow-col gap-4 snap-x snap-mandatory -my-6 py-6 overflow-x-auto overflow-y-hidden scroll-smooth"
+        class="grid grid-flow-col gap-4 snap-x snap-mandatory pl-4 overflow-x-auto overflow-y-hidden scroll-smooth md:-my-6 md:py-6 md:pl-0"
         :style="{
           gridAutoColumns: `calc((100% - ${columnsCount - 1} * 1rem) / ${columnsCount});`
         }"
       >
         <li
           v-for="(item, index) in items"
-          class="snap-start"
+          class="md:snap-start"
         >
           <div class="group relative">
             <a href="#">
