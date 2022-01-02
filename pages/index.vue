@@ -117,42 +117,172 @@
             <tr>
               <td>A</td>
               <td>298px</td>
-              <td>2 columns</td>
-              <td>2 columns</td>
-              <td>3 columns</td>
-              <td>3 columns</td>
+              <td>
+                <div class="flex items-center space-x-1 h-3">
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                </div>
+              </td>
+              <td>
+                <div class="flex items-center space-x-1 h-3">
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                </div>
+              </td>
+              <td>
+                <div class="flex items-center space-x-1 h-3">
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                </div>
+              </td>
+              <td>
+                <div class="flex items-center space-x-1 h-3">
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                </div>
+              </td>
             </tr>
             <tr>
               <td>B</td>
               <td>270px</td>
-              <td>2 columns</td>
-              <td>3 columns</td>
-              <td>4 columns</td>
-              <td>4 columns</td>
+              <td>
+                <div class="flex items-center space-x-1 h-3">
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                </div>
+              </td>
+              <td>
+                <div class="flex items-center space-x-1 h-3">
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                </div>
+              </td>
+              <td>
+                <div class="flex items-center space-x-1 h-3">
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                </div>
+              </td>
+              <td>
+                <div class="flex items-center space-x-1 h-3">
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                </div>
+              </td>
             </tr>
             <tr>
               <td>C</td>
               <td>200px</td>
-              <td>3 columns</td>
-              <td>4 columns</td>
-              <td>5 columns</td>
-              <td>5 columns</td>
+              <td>
+                <div class="flex items-center space-x-1 h-3">
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                </div>
+              </td>
+              <td>
+                <div class="flex items-center space-x-1 h-3">
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                </div>
+              </td>
+              <td>
+                <div class="flex items-center space-x-1 h-3">
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                </div>
+              </td>
+              <td>
+                <div class="flex items-center space-x-1 h-3">
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                </div>
+              </td>
             </tr>
             <tr>
               <td>EpicInline</td>
               <td>126px</td>
-              <td>5 columns</td>
-              <td>5 columns</td>
-              <td>6 columns</td>
-              <td>6 columns</td>
+              <td>
+                <div class="flex items-center space-x-1 h-3">
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                </div>
+              </td>
+              <td>
+                <div class="flex items-center space-x-1 h-3">
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                </div>
+              </td>
+              <td>
+                <div class="flex items-center space-x-1 h-3">
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                </div>
+              </td>
+              <td>
+                <div class="flex items-center space-x-1 h-3">
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                </div>
+              </td>
             </tr>
             <tr>
               <td>FullWidth</td>
-              <td>1 column</td>
-              <td>1 column</td>
-              <td>1 column</td>
-              <td>1 column</td>
-              <td>1 column</td>
+              <td>
+                <div class="flex items-center space-x-1 h-3">
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                </div>
+              </td>
+              <td>
+                <div class="flex items-center space-x-1 h-3">
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                </div>
+              </td>
+              <td>
+                <div class="flex items-center space-x-1 h-3">
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                </div>
+              </td>
+              <td>
+                <div class="flex items-center space-x-1 h-3">
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                </div>
+              </td>
+              <td>
+                <div class="flex items-center space-x-1 h-3">
+                  <div class="flex-grow h-full bg-current rounded-sm" />
+                </div>
+              </td>
             </tr>
           </tbody>
         </table>

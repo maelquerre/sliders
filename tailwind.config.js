@@ -33,7 +33,7 @@ module.exports = {
               letterSpacing: theme('letterSpacing.tight')
             },
             h4: {
-              color: theme('colors.slate[200]'),
+              color: theme('colors.slate[200]')
             },
             a: {
               textDecoration: 'none',
@@ -60,7 +60,7 @@ module.exports = {
             },
             'thead th': {
               color: theme('colors.slate[200]'),
-              fontWeight: '600',
+              fontWeight: '600'
             },
             'tbody tr': {
               borderBottomWidth: '1px',
@@ -69,6 +69,9 @@ module.exports = {
             'tbody tr:last-child': {
               borderBottomWidth: '1px',
               borderBottomColor: withAlphaValue(theme('colors.gray[400]'), .2)
+            },
+            'tbody td': {
+              verticalAlign: 'middle'
             }
           }
         }
