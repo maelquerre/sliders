@@ -1,6 +1,7 @@
-# Streaming sliders
+# Sliders
 
-Exploration of sliders from popular streaming services websites, made with [Tailwind CSS](https://tailwindcss.com/).
+Exploration of sliders from popular streaming services websites, 
+made with [Nuxt.js](https://nuxtjs.org/) and [Tailwind CSS](https://tailwindcss.com/).
 
 ## Getting started
 
