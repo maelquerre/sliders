@@ -15,7 +15,7 @@
           d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"
         />
       </svg>
-      <h1 class="hidden text-3xl font-bold tracking-tight md:block">Streaming services sliders</h1>
+      <h1 class="hidden text-5xl font-bold tracking-tight md:block">Sliders</h1>
 
       <a
         href="https://tailwindcss.com/"
@@ -52,7 +52,7 @@
         <h3><code>data-grid="B"</code></h3>
       </Prose>
       <AppleShelfGrid
-        :movies="popularMovies"
+        :movies="topRatedMovies"
         grid="B"
       />
 
@@ -60,7 +60,7 @@
         <h3><code>data-grid="C"</code></h3>
       </Prose>
       <AppleShelfGrid
-        :movies="popularMovies"
+        :movies="upcomingMovies"
         grid="C"
       />
 
@@ -102,190 +102,192 @@
           There are multiple types of rows, with multiple columns layouts for each breakpoint.
         </p>
 
-        <table>
-          <thead>
-            <tr>
-              <th><code>data-grid</code></th>
-              <th>Default</th>
-              <th>740px</th>
-              <th>1000px</th>
-              <th>1320px</th>
-              <th>1680px</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>A</td>
-              <td class="text-center">298px</td>
-              <td>
-                <div class="flex items-center space-x-1 h-3">
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                </div>
-              </td>
-              <td>
-                <div class="flex items-center space-x-1 h-3">
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                </div>
-              </td>
-              <td>
-                <div class="flex items-center space-x-1 h-3">
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                </div>
-              </td>
-              <td>
-                <div class="flex items-center space-x-1 h-3">
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>B</td>
-              <td class="text-center">270px</td>
-              <td>
-                <div class="flex items-center space-x-1 h-3">
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                </div>
-              </td>
-              <td>
-                <div class="flex items-center space-x-1 h-3">
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                </div>
-              </td>
-              <td>
-                <div class="flex items-center space-x-1 h-3">
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                </div>
-              </td>
-              <td>
-                <div class="flex items-center space-x-1 h-3">
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>C</td>
-              <td class="text-center">200px</td>
-              <td>
-                <div class="flex items-center space-x-1 h-3">
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                </div>
-              </td>
-              <td>
-                <div class="flex items-center space-x-1 h-3">
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                </div>
-              </td>
-              <td>
-                <div class="flex items-center space-x-1 h-3">
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                </div>
-              </td>
-              <td>
-                <div class="flex items-center space-x-1 h-3">
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>EpicInline</td>
-              <td class="text-center">126px</td>
-              <td>
-                <div class="flex items-center space-x-1 h-3">
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                </div>
-              </td>
-              <td>
-                <div class="flex items-center space-x-1 h-3">
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                </div>
-              </td>
-              <td>
-                <div class="flex items-center space-x-1 h-3">
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                </div>
-              </td>
-              <td>
-                <div class="flex items-center space-x-1 h-3">
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>FullWidth</td>
-              <td>
-                <div class="flex items-center space-x-1 h-3">
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                </div>
-              </td>
-              <td>
-                <div class="flex items-center space-x-1 h-3">
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                </div>
-              </td>
-              <td>
-                <div class="flex items-center space-x-1 h-3">
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                </div>
-              </td>
-              <td>
-                <div class="flex items-center space-x-1 h-3">
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                </div>
-              </td>
-              <td>
-                <div class="flex items-center space-x-1 h-3">
-                  <div class="flex-grow h-full bg-current rounded-sm" />
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="overflow-auto break-before-column">
+          <table class="overflow-scroll">
+            <thead>
+              <tr>
+                <th><code>data-grid</code></th>
+                <th>Default</th>
+                <th>740px</th>
+                <th>1000px</th>
+                <th>1320px</th>
+                <th>1680px</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>A</td>
+                <td class="text-center">298px</td>
+                <td>
+                  <div class="flex items-center space-x-1 h-3">
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                  </div>
+                </td>
+                <td>
+                  <div class="flex items-center space-x-1 h-3">
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                  </div>
+                </td>
+                <td>
+                  <div class="flex items-center space-x-1 h-3">
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                  </div>
+                </td>
+                <td>
+                  <div class="flex items-center space-x-1 h-3">
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>B</td>
+                <td class="text-center">270px</td>
+                <td>
+                  <div class="flex items-center space-x-1 h-3">
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                  </div>
+                </td>
+                <td>
+                  <div class="flex items-center space-x-1 h-3">
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                  </div>
+                </td>
+                <td>
+                  <div class="flex items-center space-x-1 h-3">
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                  </div>
+                </td>
+                <td>
+                  <div class="flex items-center space-x-1 h-3">
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>C</td>
+                <td class="text-center">200px</td>
+                <td>
+                  <div class="flex items-center space-x-1 h-3">
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                  </div>
+                </td>
+                <td>
+                  <div class="flex items-center space-x-1 h-3">
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                  </div>
+                </td>
+                <td>
+                  <div class="flex items-center space-x-1 h-3">
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                  </div>
+                </td>
+                <td>
+                  <div class="flex items-center space-x-1 h-3">
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>EpicInline</td>
+                <td class="text-center">126px</td>
+                <td>
+                  <div class="flex items-center space-x-1 h-3">
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                  </div>
+                </td>
+                <td>
+                  <div class="flex items-center space-x-1 h-3">
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                  </div>
+                </td>
+                <td>
+                  <div class="flex items-center space-x-1 h-3">
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                  </div>
+                </td>
+                <td>
+                  <div class="flex items-center space-x-1 h-3">
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>FullWidth</td>
+                <td>
+                  <div class="flex items-center space-x-1 h-3">
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                  </div>
+                </td>
+                <td>
+                  <div class="flex items-center space-x-1 h-3">
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                  </div>
+                </td>
+                <td>
+                  <div class="flex items-center space-x-1 h-3">
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                  </div>
+                </td>
+                <td>
+                  <div class="flex items-center space-x-1 h-3">
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                  </div>
+                </td>
+                <td>
+                  <div class="flex items-center space-x-1 h-3">
+                    <div class="flex-grow h-full bg-current rounded-sm" />
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <h3>Naming</h3>
         <table>
@@ -460,17 +462,21 @@ export default {
   },
 
   async asyncData({ $api, store }) {
-    const configurationResponse = await $api.$get('configuration')
-    store.commit('tmdb/setConfiguration', configurationResponse)
+    const configuration = await $api.$get('configuration')
+    store.commit('tmdb/setConfiguration', configuration)
 
     const popularMoviesResponse = await $api.$get('movie/popular')
     const popularMovies = popularMoviesResponse.results
+
+    const topRatedMoviesResponse = await $api.$get('movie/top_rated')
+    const topRatedMovies = topRatedMoviesResponse.results
 
     const upcomingMoviesResponse = await $api.$get('movie/upcoming')
     const upcomingMovies = upcomingMoviesResponse.results
 
     return {
       popularMovies,
+      topRatedMovies,
       upcomingMovies
     }
   }

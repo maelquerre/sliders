@@ -1,6 +1,6 @@
 <template>
-  <div class="relative w-full md:px-16">
-    <div class="-mx-4 px-4 w-full box-content">
+  <div class="relative w-full overflow-hidden md:px-16">
+    <div class="-mx-4 px-4 w-full overflow-hidden box-content">
       <ul
         class="grid grid-flow-col gap-3 snap-x snap-mandatory pl-4 overflow-x-auto overflow-y-hidden scroll-smooth scrollbar:hidden md:-my-5 md:py-5 md:pl-0 md:gap-5"
         :class="{
