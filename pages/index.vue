@@ -116,7 +116,7 @@
           <tbody>
             <tr>
               <td>A</td>
-              <td>298px</td>
+              <td class="text-center">298px</td>
               <td>
                 <div class="flex items-center space-x-1 h-3">
                   <div class="flex-grow h-full bg-current rounded-sm" />
@@ -146,7 +146,7 @@
             </tr>
             <tr>
               <td>B</td>
-              <td>270px</td>
+              <td class="text-center">270px</td>
               <td>
                 <div class="flex items-center space-x-1 h-3">
                   <div class="flex-grow h-full bg-current rounded-sm" />
@@ -179,7 +179,7 @@
             </tr>
             <tr>
               <td>C</td>
-              <td>200px</td>
+              <td class="text-center">200px</td>
               <td>
                 <div class="flex items-center space-x-1 h-3">
                   <div class="flex-grow h-full bg-current rounded-sm" />
@@ -216,7 +216,7 @@
             </tr>
             <tr>
               <td>EpicInline</td>
-              <td>126px</td>
+              <td class="text-center">126px</td>
               <td>
                 <div class="flex items-center space-x-1 h-3">
                   <div class="flex-grow h-full bg-current rounded-sm" />
