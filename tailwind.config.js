@@ -1,5 +1,3 @@
-const { withAlphaValue } = require('tailwindcss/lib/util/withAlphaVariable')
-
 module.exports = {
   content: [
     './components/**/*.{js,vue,ts}',
@@ -56,7 +54,7 @@ module.exports = {
             },
             thead: {
               borderBottomWidth: '1px',
-              borderBottomColor: withAlphaValue(theme('colors.gray[400]'), .2)
+              borderBottomColor: 'rgb(156 163 175 / 0.2)'
             },
             'thead th': {
               color: theme('colors.slate[200]'),
@@ -64,11 +62,11 @@ module.exports = {
             },
             'tbody tr': {
               borderBottomWidth: '1px',
-              borderBottomColor: withAlphaValue(theme('colors.gray[400]'), .1)
+              borderBottomColor: 'rgb(156 163 175 / 0.1)'
             },
             'tbody tr:last-child': {
               borderBottomWidth: '1px',
-              borderBottomColor: withAlphaValue(theme('colors.gray[400]'), .2)
+              borderBottomColor: 'rgb(156 163 175 / 0.2)'
             },
             'tbody td': {
               verticalAlign: 'middle'
