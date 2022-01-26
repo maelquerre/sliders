@@ -54,7 +54,7 @@ module.exports = {
             },
             thead: {
               borderBottomWidth: '1px',
-              borderBottomColor: 'rgba(156, 163, 175, .1)'
+              borderBottomColor: 'rgba(156, 163, 175, .2)'
             },
             'thead th': {
               color: theme('colors.slate[200]'),
