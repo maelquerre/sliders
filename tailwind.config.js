@@ -60,11 +60,11 @@ module.exports = {
               color: theme('colors.slate[200]'),
               fontWeight: '600'
             },
-            'tbody tr': {
+            'tbody tr td': {
               borderBottomWidth: '1px',
               borderBottomColor: 'rgb(156 163 175 / 0.1)'
             },
-            'tbody tr:last-child': {
+            'tbody tr:last-child td': {
               borderBottomWidth: '1px',
               borderBottomColor: 'rgb(156 163 175 / 0.2)'
             },
