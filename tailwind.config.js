@@ -57,7 +57,16 @@ module.exports = {
               borderBottomColor: 'rgb(156 163 175 / 0.2)',
               th: {
                 color: theme('colors.slate[400]'),
-                fontWeight: '600',
+                fontWeight: theme('fontWeight.600'),
+                paddingRight: theme('padding.2'),
+                paddingBottom: theme('padding.2'),
+                paddingLeft: theme('padding.2'),
+              },
+              'th:first-child': {
+                paddingLeft: '0',
+              },
+              'th:last-child': {
+                paddingRight: '0',
               },
             },
             tbody: {
@@ -70,7 +79,17 @@ module.exports = {
                 borderBottomColor: 'rgb(156 163 175 / 0.2)',
               },
               td: {
+                paddingTop: theme('padding.2'),
+                paddingRight: theme('padding.2'),
+                paddingBottom: theme('padding.2'),
+                paddingLeft: theme('padding.2'),
                 verticalAlign: 'middle',
+              },
+              'td:first-child': {
+                paddingLeft: '0',
+              },
+              'td:last-child': {
+                paddingRight: '0',
               },
             },
           }
