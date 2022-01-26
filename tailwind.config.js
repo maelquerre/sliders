@@ -54,30 +54,25 @@ module.exports = {
             },
             thead: {
               borderBottomWidth: '1px',
-              borderBottomColor: 'rgb(156 163 175 / 0.2)'
+              borderBottomColor: 'rgb(156 163 175 / 0.2)',
+              th: {
+                color: theme('colors.slate[400]'),
+                fontWeight: '600',
+              },
             },
-            'thead th': {
-              color: theme('colors.slate[400]'),
-              fontWeight: '600',
-              paddingRight: theme('padding.2'),
-              paddingBottom: theme('padding.2'),
-              paddingLeft: theme('padding.2'),
+            tbody: {
+              tr: {
+                borderBottomWidth: '1px',
+                borderBottomColor: 'rgb(156 163 175 / 0.1)',
+              },
+              'tr:last-child': {
+                borderBottomWidth: '1px',
+                borderBottomColor: 'rgb(156 163 175 / 0.2)',
+              },
+              td: {
+                verticalAlign: 'middle',
+              },
             },
-            'tbody tr': {
-              borderBottomWidth: '1px',
-              borderBottomColor: 'rgb(156 163 175 / 0.1)'
-            },
-            'tbody tr:last-child': {
-              borderBottomWidth: '1px',
-              borderBottomColor: 'rgb(156 163 175 / 0.2)'
-            },
-            'tbody td': {
-              paddingTop: theme('padding.2'),
-              paddingRight: theme('padding.2'),
-              paddingBottom: theme('padding.2'),
-              paddingLeft: theme('padding.2'),
-              verticalAlign: 'middle'
-            }
           }
         }
       })
