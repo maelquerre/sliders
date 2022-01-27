@@ -462,12 +462,15 @@
         <h3>Sliding</h3>
         <p>
           Arte benefits from the CSS behavior of combined overflows values. It uses <code>overflow-y: hidden</code> and
-          <code>overflow-x: visible</code>. Those combined values make the <code>overflow-x</code> compute to
+          <code>overflow-x: visible</code>, which actually makes the <code>overflow-x</code> compute to
           <code>auto</code>
           <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-x#values" target="_blank">as described in the MDN docs</a>:
         </p>
         <blockquote>
-          <p>If overflow-y is hidden, scroll or auto and this property is visible, it will implicitly compute to auto.</p>
+          <p>
+            If <code>overflow-y</code> is <code>hidden</code>, <code>scroll</code> or <code>auto</code> and this
+            property is <code>visible</code>, it will implicitly compute to <code>auto</code>.
+          </p>
         </blockquote>
 
         <h3>Naming</h3>

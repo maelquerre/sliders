@@ -4,7 +4,7 @@
       <Teaser
         v-for="movie in movies"
         :key="movie.id"
-        class="group-hover:hover:scale-110"
+        class="peer group-hover:-translate-x-[5%] group-hover:hover:scale-110 group-hover:peer-hover:translate-x-[5%] group-hover:hover:translate-x-0"
         :teaser="movie"
       />
     </div>
