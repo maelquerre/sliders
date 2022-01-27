@@ -108,8 +108,4 @@ export default {
 .auto-cols-full-width {
   grid-auto-columns: calc((100% - 0 * theme('gap.5')) / 1);
 }
-
-.scrollbar\:hidden::-webkit-scrollbar {
-  display: none;
-}
 </style>

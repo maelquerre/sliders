@@ -8,3 +8,9 @@
     background-image: url(https://tailwindcss.com/_next/static/media/docs-dark@tinypng.a8984b7fb44a4f8232d04de50220ab31.png);
   }
 }
+
+@layer utilities {
+  .scrollbar\:hidden::-webkit-scrollbar {
+    display: none;
+  }
+}
