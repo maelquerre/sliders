@@ -452,9 +452,11 @@
         <h2>Arte</h2>
       </Prose>
 
-      <ArteSlider
-        :movies="popularMovies"
-      />
+      <div class="px-4 md:px-16">
+        <ArteSlider
+          :movies="popularMovies"
+        />
+      </div>
 
       <Prose split>
         <h3>Sliding</h3>
