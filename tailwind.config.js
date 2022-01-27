@@ -43,6 +43,12 @@ module.exports = {
                 borderBottomWidth: '2px'
               }
             },
+            blockquote: {
+              fontWeight: '500',
+              fontStyle: 'normal',
+              color: theme('colors.slate[300]'),
+              borderLeftColor: theme('colors.slate[700]'),
+            },
             code: {
               fontFamily: theme('fontFamily.mono'),
               fontSize: '.875em',

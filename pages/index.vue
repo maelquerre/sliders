@@ -398,7 +398,7 @@
     </section>
 
     <section class="mt-12">
-      <Prose class="mt-4">
+      <Prose class="mb-4">
         <h2>Netflix</h2>
       </Prose>
 
@@ -446,19 +446,68 @@
         </table>
       </Prose>
     </section>
+
+    <section class="mt-12">
+      <Prose class="mb-4">
+        <h2>Arte</h2>
+      </Prose>
+
+      <ArteSlider
+        :movies="popularMovies"
+      />
+
+      <Prose split>
+        <h3>Sliding</h3>
+        <p>
+          Arte benefits from the CSS behavior of combined overflows values. It uses <code>overflow-y: hidden</code> and
+          <code>overflow-x: visible</code>. Those combined values make the <code>overflow-x</code> compute to
+          <code>auto</code>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-x#values" target="_blank">as described in the MDN docs</a>:
+        </p>
+        <blockquote>
+          <p>If overflow-y is hidden, scroll or auto and this property is visible, it will implicitly compute to auto.</p>
+        </blockquote>
+
+        <h3>Naming</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Container</td>
+              <td><code>Slider</code></td>
+            </tr>
+            <tr>
+              <td>List</td>
+              <td><code>slick-list</code></td>
+            </tr>
+            <tr>
+              <td>Children</td>
+              <td><code>Teaser</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </Prose>
+    </section>
   </div>
 </template>
 
 <script>
 import AppleShelfGrid from '../components/apple/ShelfGrid'
+import ArteSlider from '../components/arte/Slider'
 import DisneySlickSlider from '../components/disney/SlickSlider'
 import Prose from '../components/core/Prose'
 
 export default {
   components: {
     AppleShelfGrid,
+    ArteSlider,
     DisneySlickSlider,
-    Prose
+    Prose,
   },
 
   async asyncData({ $api, store }) {

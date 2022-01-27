@@ -12,8 +12,8 @@
         }"
       >
         <ShelfGridListItem
-          v-for="(movie, index) in movies"
-          :key="index"
+          v-for="movie in movies"
+          :key="movie.id"
           class="md:snap-start"
           :fullWidth="grid === 'FullWidth'"
           :imageSrc="image(movie.backdrop_path)"
