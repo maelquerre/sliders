@@ -8,3 +8,9 @@
     background-image: url(~assets/images/dark.png);
   }
 }
+
+@layer utilities {
+  .scrollbar\:hidden::-webkit-scrollbar {
+    display: none;
+  }
+}

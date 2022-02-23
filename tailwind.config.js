@@ -43,6 +43,12 @@ module.exports = {
                 borderBottomWidth: '2px'
               }
             },
+            blockquote: {
+              fontWeight: '500',
+              fontStyle: 'normal',
+              color: theme('colors.slate[300]'),
+              borderLeftColor: theme('colors.slate[700]'),
+            },
             code: {
               fontFamily: theme('fontFamily.mono'),
               fontSize: '.875em',
@@ -54,23 +60,44 @@ module.exports = {
             },
             thead: {
               borderBottomWidth: '1px',
-              borderBottomColor: 'rgb(156 163 175 / 0.2)'
+              borderBottomColor: 'rgb(156 163 175 / 0.2)',
+              th: {
+                color: theme('colors.slate[400]'),
+                fontWeight: theme('fontWeight.600'),
+                paddingRight: theme('padding.2'),
+                paddingBottom: theme('padding.2'),
+                paddingLeft: theme('padding.2'),
+              },
+              'th:first-child': {
+                paddingLeft: '0',
+              },
+              'th:last-child': {
+                paddingRight: '0',
+              },
             },
-            'thead th': {
-              color: theme('colors.slate[200]'),
-              fontWeight: '600'
+            tbody: {
+              tr: {
+                borderBottomWidth: '1px',
+                borderBottomColor: 'rgb(156 163 175 / 0.1)',
+              },
+              'tr:last-child': {
+                borderBottomWidth: '1px',
+                borderBottomColor: 'rgb(156 163 175 / 0.2)',
+              },
+              td: {
+                paddingTop: theme('padding.2'),
+                paddingRight: theme('padding.2'),
+                paddingBottom: theme('padding.2'),
+                paddingLeft: theme('padding.2'),
+                verticalAlign: 'middle',
+              },
+              'td:first-child': {
+                paddingLeft: '0',
+              },
+              'td:last-child': {
+                paddingRight: '0',
+              },
             },
-            'tbody tr': {
-              borderBottomWidth: '1px',
-              borderBottomColor: 'rgb(156 163 175 / 0.1)'
-            },
-            'tbody tr:last-child': {
-              borderBottomWidth: '1px',
-              borderBottomColor: 'rgb(156 163 175 / 0.2)'
-            },
-            'tbody td': {
-              verticalAlign: 'middle'
-            }
           }
         }
       })

@@ -42,7 +42,7 @@
         >
           <SlickSlide
             v-for="(movie, index) in movies"
-            :key="index"
+            :key="movie.id"
             :class="{ 'opacity-50': index < currentSlide * columnsCount - columnsCount || index >= currentSlide * columnsCount }"
             :imageSrc="image(movie.backdrop_path)"
             :width="slickSlideWidth"

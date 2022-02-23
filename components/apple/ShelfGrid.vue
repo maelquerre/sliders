@@ -12,8 +12,8 @@
         }"
       >
         <ShelfGridListItem
-          v-for="(movie, index) in movies"
-          :key="index"
+          v-for="movie in movies"
+          :key="movie.id"
           class="md:snap-start"
           :fullWidth="grid === 'FullWidth'"
           :imageSrc="image(movie.backdrop_path)"
@@ -107,9 +107,5 @@ export default {
 
 .auto-cols-full-width {
   grid-auto-columns: calc((100% - 0 * theme('gap.5')) / 1);
-}
-
-.scrollbar\:hidden::-webkit-scrollbar {
-  display: none;
 }
 </style>
