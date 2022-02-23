@@ -5,6 +5,6 @@
 @layer base {
   body {
     @apply bg-top bg-contain bg-no-repeat;
-    background-image: url(https://tailwindcss.com/_next/static/media/docs-dark@tinypng.a8984b7fb44a4f8232d04de50220ab31.png);
+    background-image: url(~assets/images/dark.png);
   }
 }
