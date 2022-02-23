@@ -20,6 +20,7 @@ export default {
       class: 'text-white bg-gray-900 antialiased'
     },
     link: [
+      { rel: 'icon', type: 'image/png', href: '/favicon.png' },
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: '' },
       {
